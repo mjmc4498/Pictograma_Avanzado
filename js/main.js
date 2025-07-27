@@ -3,16 +3,51 @@ document.addEventListener('DOMContentLoaded', () => {
     const synth = window.speechSynthesis;
 
     const pictograms = [
-        { id: 1, text: 'Yo', icon: 'fa-solid fa-user' },
-        { id: 2, text: 'Quiero', icon: 'fa-solid fa-hand-holding-heart' },
-        { id: 3, text: 'Jugar', icon: 'fa-solid fa-gamepad' },
-        { id: 4, text: 'Casa', icon: 'fa-solid fa-house' },
-        { id: 5, text: 'Comer', icon: 'fa-solid fa-utensils' },
-        { id: 6, text: 'Beber', icon: 'fa-solid fa-martini-glass' },
+        // Verbos
+        { id: 1, text: 'Quiero', icon: 'fa-solid fa-hand-holding-heart', category: 'Verbos' },
+        { id: 2, text: 'Jugar', icon: 'fa-solid fa-gamepad', category: 'Verbos' },
+        { id: 3, text: 'Comer', icon: 'fa-solid fa-utensils', category: 'Verbos' },
+        { id: 4, text: 'Beber', icon: 'fa-solid fa-martini-glass', category: 'Verbos' },
+        { id: 5, text: 'Ir', icon: 'fa-solid fa-person-walking-arrow-right', category: 'Verbos' },
+        { id: 6, text: 'Ver', icon: 'fa-solid fa-eye', category: 'Verbos' },
+
+        // Sujetos
+        { id: 7, text: 'Yo', icon: 'fa-solid fa-user', category: 'Sujetos' },
+        { id: 8, text: 'Tú', icon: 'fa-solid fa-user-group', category: 'Sujetos' },
+        { id: 9, text: 'Él/Ella', icon: 'fa-solid fa-person', category: 'Sujetos' },
+        { id: 10, text: 'Nosotros', icon: 'fa-solid fa-people-group', category: 'Sujetos' },
+
+        // Cosas
+        { id: 11, text: 'Casa', icon: 'fa-solid fa-house', category: 'Cosas' },
+        { id: 12, text: 'Pelota', icon: 'fa-solid fa-futbol', category: 'Cosas' },
+        { id: 13, text: 'Agua', icon: 'fa-solid fa-glass-water', category: 'Cosas' },
+        { id: 14, text: 'Comida', icon: 'fa-solid fa-bowl-food', category: 'Cosas' },
+
+        // Adjetivos
+        { id: 15, text: 'Feliz', icon: 'fa-solid fa-face-smile', category: 'Adjetivos' },
+        { id: 16, text: 'Triste', icon: 'fa-solid fa-face-sad-tear', category: 'Adjetivos' },
+        { id: 17, text: 'Grande', icon: 'fa-solid fa-up-right-and-down-left-from-center', category: 'Adjetivos' },
+        { id: 18, text: 'Pequeño', icon: 'fa-solid fa-down-left-and-up-right-to-center', category: 'Adjetivos' },
     ];
 
-    function loadPictograms() {
-        pictograms.forEach(pictogram => {
+    function populateCategories() {
+        const categories = [...new Set(pictograms.map(p => p.category))];
+        const categorySelector = document.getElementById('category-selector');
+        categories.forEach(category => {
+            const option = document.createElement('option');
+            option.value = category;
+            option.textContent = category;
+            categorySelector.appendChild(option);
+        });
+    }
+
+    function loadPictograms(category = 'all') {
+        pictogramGrid.innerHTML = '';
+        const filteredPictograms = category === 'all'
+            ? pictograms
+            : pictograms.filter(p => p.category === category);
+
+        filteredPictograms.forEach(pictogram => {
             const pictoElement = document.createElement('div');
             pictoElement.classList.add('col-4', 'col-md-3', 'mb-3');
             pictoElement.draggable = true;
@@ -36,6 +71,10 @@ document.addEventListener('DOMContentLoaded', () => {
             pictogramGrid.appendChild(pictoElement);
         });
     }
+
+    document.getElementById('category-selector').addEventListener('change', (e) => {
+        loadPictograms(e.target.value);
+    });
 
     function addPictogramToPhrase(pictogram) {
         const phraseBuilder = document.getElementById('phrase-builder');
@@ -312,6 +351,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    populateCategories();
     loadPictograms();
     renderSavedPhrases();
     renderHistory();
