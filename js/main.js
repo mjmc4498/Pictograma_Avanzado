@@ -2,33 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const pictogramGrid = document.getElementById('pictogram-grid');
     const synth = window.speechSynthesis;
 
-    const pictograms = [
-        // Verbos
-        { id: 1, text: 'Quiero', icon: 'fa-solid fa-hand-holding-heart', category: 'Verbos' },
-        { id: 2, text: 'Jugar', icon: 'fa-solid fa-gamepad', category: 'Verbos' },
-        { id: 3, text: 'Comer', icon: 'fa-solid fa-utensils', category: 'Verbos' },
-        { id: 4, text: 'Beber', icon: 'fa-solid fa-martini-glass', category: 'Verbos' },
-        { id: 5, text: 'Ir', icon: 'fa-solid fa-person-walking-arrow-right', category: 'Verbos' },
-        { id: 6, text: 'Ver', icon: 'fa-solid fa-eye', category: 'Verbos' },
-
-        // Sujetos
-        { id: 7, text: 'Yo', icon: 'fa-solid fa-user', category: 'Sujetos' },
-        { id: 8, text: 'Tú', icon: 'fa-solid fa-user-group', category: 'Sujetos' },
-        { id: 9, text: 'Él/Ella', icon: 'fa-solid fa-person', category: 'Sujetos' },
-        { id: 10, text: 'Nosotros', icon: 'fa-solid fa-people-group', category: 'Sujetos' },
-
-        // Cosas
-        { id: 11, text: 'Casa', icon: 'fa-solid fa-house', category: 'Cosas' },
-        { id: 12, text: 'Pelota', icon: 'fa-solid fa-futbol', category: 'Cosas' },
-        { id: 13, text: 'Agua', icon: 'fa-solid fa-glass-water', category: 'Cosas' },
-        { id: 14, text: 'Comida', icon: 'fa-solid fa-bowl-food', category: 'Cosas' },
-
-        // Adjetivos
-        { id: 15, text: 'Feliz', icon: 'fa-solid fa-face-smile', category: 'Adjetivos' },
-        { id: 16, text: 'Triste', icon: 'fa-solid fa-face-sad-tear', category: 'Adjetivos' },
-        { id: 17, text: 'Grande', icon: 'fa-solid fa-up-right-and-down-left-from-center', category: 'Adjetivos' },
-        { id: 18, text: 'Pequeño', icon: 'fa-solid fa-down-left-and-up-right-to-center', category: 'Adjetivos' },
-    ];
 
     function populateCategories() {
         const categories = [...new Set(pictograms.map(p => p.category))];
