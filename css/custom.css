@@ -1,0 +1,83 @@
+/* Custom Stylesheet */
+
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --text-color: #212529;
+    --card-background-color: #ffffff;
+    --card-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.card {
+    background-color: var(--card-background-color);
+    box-shadow: var(--card-shadow);
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+#phrase-builder {
+    background-color: #e9ecef;
+    border-radius: 10px;
+    padding: 20px;
+    min-height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.pictogram {
+    cursor: pointer;
+    text-align: center;
+}
+
+.pictogram .card-body {
+    padding: 1rem;
+}
+
+.pictogram i {
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+.pictogram p {
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+#saved-phrases .list-group-item,
+#history .list-group-item {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#saved-phrases .list-group-item:hover,
+#history .list-group-item:hover {
+    background-color: #e9ecef;
+}
