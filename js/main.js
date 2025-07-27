@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             pictoElement.innerHTML = `
                 <div class="pictogram card text-center">
                     <div class="card-body">
-                        <i class="${pictogram.icon} fa-3x"></i>
+                        <iconify-icon icon="${pictogram.icon}" width="60" height="60"></iconify-icon>
                         <p class="card-text mt-2">${pictogram.text}</p>
                     </div>
                 </div>
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         pictoElement.classList.add('pictogram', 'd-inline-block', 'm-1', 'text-center');
         pictoElement.dataset.id = pictogram.id;
         pictoElement.innerHTML = `
-            <i class="${pictogram.icon} fa-2x"></i>
+            <iconify-icon icon="${pictogram.icon}" width="40" height="40"></iconify-icon>
             <p>${pictogram.text}</p>
         `;
         phraseBuilder.appendChild(pictoElement);
