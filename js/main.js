@@ -3,12 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const synth = window.speechSynthesis;
 
     const pictograms = [
-        { id: 1, text: 'Yo', image: 'img/yo.png' },
-        { id: 2, text: 'Quiero', image: 'img/quiero.png' },
-        { id: 3, text: 'Jugar', image: 'img/jugar.png' },
-        { id: 4, text: 'Casa', image: 'img/casa.png' },
-        { id: 5, text: 'Comer', image: 'img/comer.png' },
-        { id: 6, text: 'Beber', image: 'img/beber.png' },
+        { id: 1, text: 'Yo', icon: 'fa-solid fa-user' },
+        { id: 2, text: 'Quiero', icon: 'fa-solid fa-hand-holding-heart' },
+        { id: 3, text: 'Jugar', icon: 'fa-solid fa-gamepad' },
+        { id: 4, text: 'Casa', icon: 'fa-solid fa-house' },
+        { id: 5, text: 'Comer', icon: 'fa-solid fa-utensils' },
+        { id: 6, text: 'Beber', icon: 'fa-solid fa-martini-glass' },
     ];
 
     function loadPictograms() {
@@ -19,9 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
             pictoElement.dataset.id = pictogram.id;
             pictoElement.innerHTML = `
                 <div class="pictogram card text-center">
-                    <img src="${pictogram.image}" class="card-img-top" alt="${pictogram.text}">
                     <div class="card-body">
-                        <p class="card-text">${pictogram.text}</p>
+                        <i class="${pictogram.icon} fa-3x"></i>
+                        <p class="card-text mt-2">${pictogram.text}</p>
                     </div>
                 </div>
             `;
@@ -40,10 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function addPictogramToPhrase(pictogram) {
         const phraseBuilder = document.getElementById('phrase-builder');
         const pictoElement = document.createElement('div');
-        pictoElement.classList.add('pictogram', 'd-inline-block', 'm-1');
+        pictoElement.classList.add('pictogram', 'd-inline-block', 'm-1', 'text-center');
         pictoElement.dataset.id = pictogram.id;
         pictoElement.innerHTML = `
-            <img src="${pictogram.image}" width="50" alt="${pictogram.text}">
+            <i class="${pictogram.icon} fa-2x"></i>
+            <p>${pictogram.text}</p>
         `;
         phraseBuilder.appendChild(pictoElement);
     }
