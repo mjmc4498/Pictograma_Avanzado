@@ -1,0 +1,51 @@
+#pictogram-grid .pictogram {
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#pictogram-grid .pictogram:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#phrase-builder {
+    min-height: 100px;
+    background-color: #f8f9fa;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .bg-light {
+    background-color: #333 !important;
+}
+
+body.dark-mode .card {
+    background-color: #222;
+    color: #fff;
+    border-color: #444;
+}
+
+/* High Contrast */
+body.high-contrast {
+    background-color: #000;
+    color: #fff;
+}
+
+body.high-contrast .bg-primary {
+    background-color: #000 !important;
+    border-bottom: 2px solid #fff;
+}
+
+body.high-contrast .card {
+    background-color: #000;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+body.high-contrast .btn {
+    border: 2px solid #fff;
+}
