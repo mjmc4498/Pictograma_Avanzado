@@ -59,6 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>${pictogram.text}</p>
         `;
         phraseBuilder.appendChild(pictoElement);
+        phraseBuilder.classList.add('animate__animated', 'animate__pulse');
+        setTimeout(() => {
+            phraseBuilder.classList.remove('animate__animated', 'animate__pulse');
+        }, 500);
     }
 
     const phraseBuilder = document.getElementById('phrase-builder');
@@ -95,6 +99,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function showReward() {
         const rewardModal = new bootstrap.Modal(document.getElementById('rewardModal'));
         rewardModal.show();
+        setTimeout(() => {
+            rewardModal.hide();
+        }, 2000);
     }
 
     document.getElementById('clear-phrase').addEventListener('click', () => {
