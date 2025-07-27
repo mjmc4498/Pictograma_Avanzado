@@ -54,7 +54,7 @@ const pictograms = [
     { id: 48, text: 'Naranja', icon: 'fa-solid fa-orange', category: 'Comida' },
     { id: 49, text: 'Fresa', icon: 'fa-solid fa-strawberry', category: 'Comida' },
     { id: 50, text: 'Uva', icon: 'fa-solid fa-grape', category: 'Comida' },
-    { id: 51, text: 'Sandía', icon: 'fa-solid fa-watermelon-slice', category: 'Comida' },
+    { id: 51, text: 'Sandía', icon: 'fa-solid fa-lemon', category: 'Comida' },
     { id: 52, text: 'Pan', icon: 'fa-solid fa-bread-slice', category: 'Comida' },
     { id: 53, text: 'Queso', icon: 'fa-solid fa-cheese', category: 'Comida' },
     { id: 54, text: 'Huevo', icon: 'fa-solid fa-egg', category: 'Comida' },
