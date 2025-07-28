@@ -16,13 +16,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.bg-primary {
-    background: linear-gradient(45deg, var(--primary-color), #357ABD);
-    border-bottom: 5px solid var(--secondary-color);
-}
-
-header h1, header p {
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
 }
 
 .btn-primary {
