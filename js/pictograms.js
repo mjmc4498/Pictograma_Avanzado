@@ -355,4 +355,83 @@ const pictograms = [
     { id: 299, text: 'Sorpresa', icon: 'bi bi-emoji-surprise', category: 'Sentimientos' },
     { id: 300, text: 'Confianza', icon: 'bi bi-person-check', category: 'Sentimientos' },
     { id: 301, text: 'Vergüenza', icon: 'bi bi-person-exclamation', category: 'Sentimientos' },
+
+    // Ropa de Invierno
+    { id: 302, text: 'Abrigo', icon: 'bi bi-person-vcard', category: 'Ropa de Invierno' },
+    { id: 303, text: 'Bufanda', icon: 'bi bi-person-vcard', category: 'Ropa de Invierno' },
+    { id: 304, text: 'Gorro', icon: 'bi bi-person-vcard', category: 'Ropa de Invierno' },
+    { id: 305, text: 'Guantes', icon: 'bi bi-person-vcard', category: 'Ropa de Invierno' },
+    { id: 306, text: 'Botas', icon: 'bi bi-person-vcard', category: 'Ropa de Invierno' },
+
+    // Ropa de Verano
+    { id: 307, text: 'Bañador', icon: 'bi bi-person-vcard', category: 'Ropa de Verano' },
+    { id: 308, text: 'Chanclas', icon: 'bi bi-person-vcard', category: 'Ropa de Verano' },
+    { id: 309, text: 'Gorra', icon: 'bi bi-person-vcard', category: 'Ropa de Verano' },
+    { id: 310, text: 'Gafas de sol', icon: 'bi bi-sunglasses', category: 'Ropa de Verano' },
+
+    // Partes de la Casa
+    { id: 311, text: 'Salón', icon: 'bi bi-tv', category: 'Partes de la Casa' },
+    { id: 312, text: 'Comedor', icon: 'bi bi-table', category: 'Partes de la Casa' },
+    { id: 313, text: 'Dormitorio', icon: 'bi bi-bed', category: 'Partes de la Casa' },
+    { id: 314, text: 'Baño', icon: 'bi bi-toilet', category: 'Partes de la Casa' },
+    { id: 315, text: 'Cocina', icon: 'bi bi-oven', category: 'Partes de la Casa' },
+    { id: 316, text: 'Jardín', icon: 'bi bi-tree', category: 'Partes de la Casa' },
+    { id: 317, text: 'Garaje', icon: 'bi bi-car-front', category: 'Partes de la Casa' },
+
+    // Muebles
+    { id: 318, text: 'Mesa', icon: 'bi bi-table', category: 'Muebles' },
+    { id: 319, text: 'Silla', icon: 'bi bi-chair', category: 'Muebles' },
+    { id: 320, text: 'Cama', icon: 'bi bi-bed', category: 'Muebles' },
+    { id: 321, text: 'Sofá', icon: 'bi bi-sofa', category: 'Muebles' },
+    { id: 322, text: 'Armario', icon: 'bi bi-wardrobe', category: 'Muebles' },
+    { id: 323, text: 'Estantería', icon: 'bi bi-bookshelf', category: 'Muebles' },
+    { id: 324, text: 'Lámpara', icon: 'bi bi-lightbulb', category: 'Muebles' },
+
+    // Electrodomésticos
+    { id: 325, text: 'Nevera', icon: 'bi bi-snow', category: 'Electrodomésticos' },
+    { id: 326, text: 'Lavadora', icon: 'bi bi-water', category: 'Electrodomésticos' },
+    { id: 327, text: 'Horno', icon: 'bi bi-oven', category: 'Electrodomésticos' },
+    { id: 328, text: 'Microondas', icon: 'bi bi-oven', category: 'Electrodomésticos' },
+    { id: 329, text: 'Televisión', icon: 'bi bi-tv', category: 'Electrodomésticos' },
+    { id: 330, text: 'Aspiradora', icon: 'bi bi-robot', category: 'Electrodomésticos' },
+
+    // Vehículos
+    { id: 331, text: 'Coche', icon: 'bi bi-car-front', category: 'Vehículos' },
+    { id: 332, text: 'Autobús', icon: 'bi bi-bus-front', category: 'Vehículos' },
+    { id: 333, text: 'Tren', icon: 'bi bi-train-front', category: 'Vehículos' },
+    { id: 334, text: 'Avión', icon: 'bi bi-airplane', category: 'Vehículos' },
+    { id: 335, text: 'Barco', icon: 'bi bi-boat', category: 'Vehículos' },
+    { id: 336, text: 'Bicicleta', icon: 'bi bi-bicycle', category: 'Vehículos' },
+    { id: 337, text: 'Moto', icon: 'bi bi-bicycle', category: 'Vehículos' },
+    { id: 338, text: 'Taxi', icon: 'bi bi-taxi-front', category: 'Vehículos' },
+    { id: 339, text: 'Ambulancia', icon: 'bi bi-truck-front', category: 'Vehículos' },
+    { id: 340, text: 'Camión de bomberos', icon: 'bi bi-truck-front', category: 'Vehículos' },
+    { id: 341, text: 'Camión', icon: 'bi bi-truck', category: 'Vehículos' },
+
+    // Herramientas
+    { id: 342, text: 'Martillo', icon: 'bi bi-hammer', category: 'Herramientas' },
+    { id: 343, text: 'Destornillador', icon: 'bi bi-screwdriver', category: 'Herramientas' },
+    { id: 344, text: 'Sierra', icon: 'bi bi-saw', category: 'Herramientas' },
+    { id: 345, text: 'Llave inglesa', icon: 'bi bi-wrench', category: 'Herramientas' },
+    { id: 346, text: 'Taladro', icon: 'bi bi-drill', category: 'Herramientas' },
+
+    // Instrumentos Médicos
+    { id: 347, text: 'Termómetro', icon: 'bi bi-thermometer', category: 'Instrumentos Médicos' },
+    { id: 348, text: 'Tiritas', icon: 'bi bi-bandaid', category: 'Instrumentos Médicos' },
+    { id: 349, text: 'Jeringuilla', icon: 'bi bi-eyedropper', category: 'Instrumentos Médicos' },
+    { id: 350, text: 'Pastillas', icon: 'bi bi-capsule', category: 'Instrumentos Médicos' },
+
+    // Signos del Zodiaco
+    { id: 351, text: 'Aries', icon: 'bi bi-zodiac-aries', category: 'Signos del Zodiaco' },
+    { id: 352, text: 'Tauro', icon: 'bi bi-zodiac-taurus', category: 'Signos del Zodiaco' },
+    { id: 353, text: 'Géminis', icon: 'bi bi-zodiac-gemini', category: 'Signos del Zodiaco' },
+    { id: 354, text: 'Cáncer', icon: 'bi bi-zodiac-cancer', category: 'Signos del Zodiaco' },
+    { id: 355, text: 'Leo', icon: 'bi bi-zodiac-leo', category: 'Signos del Zodiaco' },
+    { id: 356, text: 'Virgo', icon: 'bi bi-zodiac-virgo', category: 'Signos del Zodiaco' },
+    { id: 357, text: 'Libra', icon: 'bi bi-zodiac-libra', category: 'Signos del Zodiaco' },
+    { id: 358, text: 'Escorpio', icon: 'bi bi-zodiac-scorpio', category: 'Signos del Zodiaco' },
+    { id: 359, text: 'Sagitario', icon: 'bi bi-zodiac-sagittarius', category: 'Signos del Zodiaco' },
+    { id: 360, text: 'Capricornio', icon: 'bi bi-zodiac-capricorn', category: 'Signos del Zodiaco' },
+    { id: 361, text: 'Acuario', icon: 'bi bi-zodiac-aquarius', category: 'Signos del Zodiaco' },
+    { id: 362, text: 'Piscis', icon: 'bi bi-zodiac-pisces', category: 'Signos del Zodiaco' },
 ];

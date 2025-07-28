@@ -25,10 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
             pictoElement.classList.add('col-4', 'col-md-3', 'mb-3');
             pictoElement.draggable = true;
             pictoElement.dataset.id = pictogram.id;
+            const iconName = pictogram.icon.replace('bi bi-', '');
             pictoElement.innerHTML = `
                 <div class="pictogram card text-center">
                     <div class="card-body">
-                        <i class="iconify-icon" data-icon="${pictogram.icon}" data-width="60" data-height="60"></i>
+                        <svg class="bi" width="60" height="60" fill="currentColor">
+                            <use xlink:href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.svg#${iconName}"/>
+                        </svg>
                         <p class="card-text mt-2">${pictogram.text}</p>
                     </div>
                 </div>
@@ -54,8 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const pictoElement = document.createElement('div');
         pictoElement.classList.add('pictogram', 'd-inline-block', 'm-1', 'text-center');
         pictoElement.dataset.id = pictogram.id;
+        const iconName = pictogram.icon.replace('bi bi-', '');
         pictoElement.innerHTML = `
-            <i class="iconify-icon" data-icon="${pictogram.icon}" data-width="40" data-height="40"></i>
+            <svg class="bi" width="40" height="40" fill="currentColor">
+                <use xlink:href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.svg#${iconName}"/>
+            </svg>
             <p>${pictogram.text}</p>
         `;
         phraseBuilder.appendChild(pictoElement);
