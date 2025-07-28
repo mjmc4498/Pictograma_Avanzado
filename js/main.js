@@ -337,19 +337,4 @@ document.addEventListener('DOMContentLoaded', () => {
     renderHistory();
     loadSettings();
 
-    const pinModal = new bootstrap.Modal(document.getElementById('pinModal'));
-    const settingsModal = new bootstrap.Modal(document.getElementById('settingsModal'));
-    const correctPin = '1234';
-
-    document.getElementById('pin-submit').addEventListener('click', () => {
-        const pinInput = document.getElementById('pin-input');
-        if (pinInput.value === correctPin) {
-            pinModal.hide();
-            settingsModal.show();
-            pinInput.value = '';
-        } else {
-            alert('PIN incorrecto');
-            pinInput.value = '';
-        }
-    });
 });
