@@ -26,16 +26,25 @@ document.addEventListener('DOMContentLoaded', () => {
             pictoElement.draggable = true;
             pictoElement.dataset.id = pictogram.id;
             const iconName = pictogram.icon.replace('bi bi-', '');
-            pictoElement.innerHTML = `
-                <div class="pictogram card text-center">
-                    <div class="card-body">
-                        <svg class="bi" width="60" height="60" fill="currentColor">
-                            <use xlink:href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.svg#${iconName}"/>
-                        </svg>
-                        <p class="card-text mt-2">${pictogram.text}</p>
-                    </div>
-                </div>
-            `;
+            const iconContainer = document.createElement('div');
+            iconContainer.classList.add('pictogram', 'card', 'text-center');
+
+            fetch(`https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/${iconName}.svg`)
+                .then(response => response.text())
+                .then(svg => {
+                    iconContainer.innerHTML = `
+                        <div class="card-body">
+                            ${svg}
+                            <p class="card-text mt-2">${pictogram.text}</p>
+                        </div>
+                    `;
+                    const svgElement = iconContainer.querySelector('svg');
+                    svgElement.setAttribute('width', '60');
+                    svgElement.setAttribute('height', '60');
+                    svgElement.setAttribute('fill', 'currentColor');
+                });
+
+            pictoElement.appendChild(iconContainer);
             pictoElement.addEventListener('click', () => {
                 addPictogramToPhrase(pictogram);
                 speak(pictogram.text);
@@ -58,12 +67,22 @@ document.addEventListener('DOMContentLoaded', () => {
         pictoElement.classList.add('pictogram', 'd-inline-block', 'm-1', 'text-center');
         pictoElement.dataset.id = pictogram.id;
         const iconName = pictogram.icon.replace('bi bi-', '');
-        pictoElement.innerHTML = `
-            <svg class="bi" width="40" height="40" fill="currentColor">
-                <use xlink:href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.svg#${iconName}"/>
-            </svg>
-            <p>${pictogram.text}</p>
-        `;
+        const iconContainer = document.createElement('div');
+
+        fetch(`https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/${iconName}.svg`)
+            .then(response => response.text())
+            .then(svg => {
+                iconContainer.innerHTML = `
+                    ${svg}
+                    <p>${pictogram.text}</p>
+                `;
+                const svgElement = iconContainer.querySelector('svg');
+                svgElement.setAttribute('width', '40');
+                svgElement.setAttribute('height', '40');
+                svgElement.setAttribute('fill', 'currentColor');
+            });
+
+        pictoElement.appendChild(iconContainer);
         phraseBuilder.appendChild(pictoElement);
         phraseBuilder.classList.add('animate__animated', 'animate__pulse');
         setTimeout(() => {
